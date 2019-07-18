@@ -11,7 +11,7 @@ st = "Hello, World!"
 msg = ''.join([bin(ord(ch))[2:].zfill(8) for ch in st])
 amt = 0
 
-print("DATA: " + str(msg))
+print("Data to send: " + str(msg))
 while hasSent is 0:
     time.sleep(.01)
     print("Loop: {}/{}".format(str(amt), str(len(msg))))
@@ -29,7 +29,7 @@ while hasSent is 0:
         f.close()
     if amt is len(msg):
         hasSent = 1
-        print("DONE")
+        print("Data sent: " + str(msg))
 time.sleep(2)
 with open(gotFile, "w") as f:
     f.write(str(2))
