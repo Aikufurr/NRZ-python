@@ -8,7 +8,7 @@ with open(gotFile, "w") as f:
     f.close()
 
 e = ""
-
+print("Waiting for data...")
 while True:
     with open(gotFile) as f:
         hasData = f.read()
